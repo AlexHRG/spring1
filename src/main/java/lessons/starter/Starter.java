@@ -10,15 +10,20 @@ import lessons.services.GreetingService;
 
 public class Starter {
 	
-	private static final Logger logger = LogManager.getLogger(Starter.class);
+	private static final Logger LOGGER = LogManager.getLogger(Starter.class);
 
 	public static void main(String[] args) {
-		logger.info("Starting configuration...");
+		LOGGER.info("Starting configuration...");
 
         AbstractApplicationContext context = new AnnotationConfigApplicationContext(LessonsConfiguration.class);
         GreetingService greetingService = context.getBean(GreetingService.class);
-        logger.info(greetingService.sayGreeting());
+        LOGGER.info(greetingService.sayGreeting());
         context.registerShutdownHook();
+        
+        
+        ResourceStarter starter = new ResourceStarter();
+		starter.printClassResourcesByContextWithPrefix();
+		starter.printClassResourcesByContextNoPrefix();
 	}
 
 }
