@@ -15,4 +15,9 @@ public class LessonsConfiguration {
 	GreetingService greetingService() {
 		return new GreetingServiceImpl();
 	}
+	
+	@Bean
+	Person person() {
+		return new Person();
+	}
 }
