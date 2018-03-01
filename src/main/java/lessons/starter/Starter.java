@@ -21,9 +21,9 @@ public class Starter {
         context.registerShutdownHook();
         
         
-        ResourceStarter starter = new ResourceStarter();
-		starter.printClassResourcesByContextWithPrefix();
-		starter.printClassResourcesByContextNoPrefix();
+//        ResourceStarter starter = new ResourceStarter();
+//		starter.printClassResourcesByContextWithPrefix();
+//		starter.printClassResourcesByContextNoPrefix();
 	}
 
 }
