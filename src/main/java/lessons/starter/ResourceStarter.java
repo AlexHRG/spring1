@@ -16,10 +16,10 @@ public class ResourceStarter {
 	
 	public static void main(String[] args) throws IOException {
 		LOGGER.info("Starting resources...");
-//		ResourceStarter starter = new ResourceStarter();
-//		starter.printClassResourcesByContextNoPrefix();
-//		starter.printClassResourcesByContextWithPrefix();
-//		starter.resourcePath();
+		ResourceStarter starter = new ResourceStarter();
+		starter.printClassResourcesByContextNoPrefix();
+		starter.printClassResourcesByContextWithPrefix();
+		starter.resourcePath();
 	}
 
 	public void printClassResourcesByContextWithPrefix() {

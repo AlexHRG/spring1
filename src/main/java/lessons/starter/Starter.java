@@ -1,6 +1,5 @@
 package lessons.starter;
 
-import org.apache.log4j.Level;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeanWrapper;
@@ -34,6 +33,9 @@ public class Starter {
         
         LOGGER.info("Person from Person - name: " + beanWrapper.getPropertyValue("name") + ", age: " + beanWrapper.getPropertyValue("age"));
         LOGGER.info("Person from Person - name: " + person.getName() + ", age: " + person.getAge());
+        
+        ValidationBindingConversionStarter validator = new ValidationBindingConversionStarter();
+        validator.personValidate();
 	}
 
 }
