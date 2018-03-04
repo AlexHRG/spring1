@@ -34,7 +34,10 @@ public class ExpressionLanguageStarter {
 		
 		LOGGER.info("name: " + name);
 		
-		name = (String) exp.getValue(tesla);
+//		name = (String) exp.getValue(tesla);
+		exp.setValue(context, "Uncle Jora");
+
+		name = (String) exp.getValue(context);
 		String nationality = (String) exp2.getValue(tesla);
 		
 		LOGGER.info("name: " + name + "; nationality: " + nationality);
